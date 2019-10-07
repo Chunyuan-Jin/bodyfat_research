@@ -9,4 +9,10 @@ https://github.com/JiawenChenn/haha/blob/master/Summary_G9.ipynb
 
 ## Web-based shiny app
 We also buid a web-based shiny app based on the model above.
+
 https://jiawen1014.shinyapps.io/BodyFat/
+
+## Contact
+Question about data cleaning: Han, Liao. hliao27@wisc.edu
+Question about model building: Chunyuan, Jin. cjin46@wisc.edu
+Question about shiny app buiding: Jiawen, Chen. jchen778@wisc.edu
