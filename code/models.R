@@ -111,6 +111,7 @@ model <- xgb.dump(bst,with_stats = T) # see all the process produced by xgboost
 model 
 names <- dimnames(data.matrix(traindata[,c(1,3:8)]))[[2]] 
 importance_matrix <- xgb.importance(names,model=bst) # feature importance
+options(repr.plot.width=3,repr.plot.height=1)
 xgb.plot.importance(importance_matrix[,])
 
 # calculate MSE of the whole dataset
@@ -136,6 +137,7 @@ summary(fit2)
 fit3<-lm(formula = BODYFAT ~ ABDOMEN + ADIPOSITY, 
          data = BodyFatData[, c("BODYFAT", "ADIPOSITY", "ABDOMEN")])
 summary(fit3)
+vif(fit1)
 plot(fit1,which = 2)
 par(mfrow=c(1,3))
 plot(fitted(fit1),residuals(fit1),xlab = "fitted values",ylab = "residuals")
@@ -144,7 +146,6 @@ plot(BodyFatData$WEIGHT,residuals(fit1),xlab = "WEIGHT", ylab = "residuals")
 par(mfrow=c(1,2))
 plot(fit1,which = 2)
 plot(fit1,which = 5)
-
 
 
 
